@@ -64,6 +64,8 @@ export function Header() {
               <>
                 <a
                   href="http://localhost:8000/views/login.blade.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-1.5 hover:opacity-80"
                 >
                   <Lock className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
@@ -90,11 +92,11 @@ export function Header() {
             className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-16 sm:w-16"
             loading="eager"
           />
-          <div className="flex-1 text-center">
+          <div className="flex-1 text-center sm:text-left">
             <h1 className="text-base leading-tight font-bold tracking-wide text-green-deep sm:text-xl lg:text-3xl">
               {SITE.name}
             </h1>
-            <p className="mt-0.5 text-xs font-bold text-royal sm:mt-1 sm:text-sm lg:text-lg">{SITE.tagline}</p>
+            <p className="hidden mt-0.5 text-xs font-bold text-royal sm:block sm:mt-1 sm:text-sm lg:text-lg">{SITE.tagline}</p>
           </div>
           <button
             type="button"
@@ -185,6 +187,20 @@ export function Header() {
                 )}
               </li>
             ))}
+            {!user && (
+              <li className="pt-3">
+                <a
+                  href="http://localhost:8000/views/login.blade.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2 rounded-md bg-gold-gradient px-4 py-3 text-sm font-bold text-primary-foreground"
+                >
+                  <Lock className="h-4 w-4" />
+                  Login
+                </a>
+              </li>
+            )}
           </ul>
         )}
       </nav>
