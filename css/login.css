@@ -1,0 +1,1351 @@
+/* Color Palette - Premium School ERP */
+:root {
+    --deep-navy: #061B3A;
+    --royal-navy: #0B2A5B;
+    --royal-blue: #1E40AF;
+    --gold: #D4A72C;
+    --bright-gold: #F5C542;
+    --metallic-gold: #C9A227;
+    --white: #FFFFFF;
+    --light-bg: #F5F7FB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+}
+
+.auth-page {
+    background: #071b3a;
+}
+
+.auth-page .login-container {
+    min-height: 100svh;
+}
+
+.logo-orbit {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    margin: 0 auto 1rem;
+}
+
+.logo-orbit .logo-glow {
+    inset: 50% auto auto 50%;
+    width: 260px;
+    height: 260px;
+    transform: translate(-50%, -50%);
+}
+
+.logo-orbit .school-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 170px;
+    transform: translate(-50%, -50%);
+    border-radius: 1.25rem;
+    object-fit: contain;
+    animation: logoFloatCentered 4s ease-in-out infinite;
+}
+
+@keyframes logoFloatCentered {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-0.45rem); }
+}
+
+.logo-orbit .orbit {
+    width: 280px;
+    height: 150px;
+    border-color: rgba(92, 210, 255, 0.65);
+}
+
+.logo-orbit .orbit-one {
+    animation: orbitTiltOne 16s linear infinite;
+}
+
+.logo-orbit .orbit-two {
+    width: 320px;
+    height: 180px;
+    border-color: rgba(245, 197, 66, 0.72);
+    animation: orbitTiltTwo 20s linear infinite reverse;
+}
+
+.logo-orbit .orbit-three {
+    width: 230px;
+    height: 320px;
+    border-color: rgba(48, 224, 164, 0.58);
+    animation: orbitTiltThree 18s linear infinite;
+}
+
+.logo-orbit .orbit span {
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    color: var(--bright-gold);
+    font-size: 1.25rem;
+    text-shadow: 0 0 12px currentColor;
+}
+
+@keyframes orbitTiltOne {
+    from { transform: translate(-50%, -50%) rotate(18deg); }
+    to { transform: translate(-50%, -50%) rotate(378deg); }
+}
+
+@keyframes orbitTiltTwo {
+    from { transform: translate(-50%, -50%) rotate(-26deg); }
+    to { transform: translate(-50%, -50%) rotate(-386deg); }
+}
+
+@keyframes orbitTiltThree {
+    from { transform: translate(-50%, -50%) rotate(72deg); }
+    to { transform: translate(-50%, -50%) rotate(432deg); }
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 620px;
+    margin: 2rem auto 0;
+}
+
+.feature-cards article {
+    min-width: 0;
+    padding: 1rem 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: featureFloat 4s ease-in-out infinite;
+}
+
+.feature-cards article:nth-child(2) { animation-delay: 0.35s; background: rgba(48, 224, 164, 0.18); }
+.feature-cards article:nth-child(3) { animation-delay: 0.7s; background: rgba(245, 197, 66, 0.2); }
+.feature-cards strong,
+.feature-cards span { display: block; }
+.feature-cards strong { font-size: 0.92rem; }
+.feature-cards span { margin-top: 0.45rem; color: rgba(255, 255, 255, 0.78); font-size: 0.72rem; line-height: 1.45; }
+
+@keyframes featureFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-0.35rem); }
+}
+
+.login-section {
+    background: linear-gradient(135deg, #f7fbff 0%, #dfeeff 54%, #fff4de 100%);
+}
+
+.login-card {
+    max-width: 540px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.eyebrow {
+    color: var(--royal-navy);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.role-icon {
+    color: var(--royal-navy) !important;
+    font-size: 1.25rem !important;
+    line-height: 1;
+}
+
+.role-btn.active .role-icon { color: var(--bright-gold) !important; }
+
+.login-quote {
+    margin-top: 1.5rem;
+    color: var(--royal-navy);
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.back-home {
+    display: block;
+    margin-top: 1.25rem;
+    color: var(--royal-navy);
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.back-home:hover { color: var(--gold); text-decoration: underline; }
+
+.hidden { display: none !important; }
+
+.mobile-benefits {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .branding-section,
+    .login-section,
+    .login-card,
+    .logo-orbit *,
+    .feature-cards article { animation: none !important; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background: var(--light-bg);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Branding Section - Premium Navy Gradient with Animation */
+.branding-section {
+    flex: 1;
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-navy) 50%, var(--royal-blue) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Particle Background */
+.particle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at 20% 50%, rgba(212, 167, 44, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 167, 44, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(212, 167, 44, 0.1) 0%, transparent 50%);
+    animation: particleGlow 8s ease-in-out infinite;
+}
+
+@keyframes particleGlow {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 20s infinite ease-in-out;
+}
+
+.particle.gold {
+    background: var(--gold);
+    box-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
+}
+
+.particle.navy {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.particle.white {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Logo Glow - Premium Radial */
+.logo-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 167, 44, 0.4) 0%, rgba(201, 162, 39, 0.2) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse-glow 4s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+    }
+}
+
+/* Gold Atom/Orbit Effect */
+.orbit-container {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid rgba(212, 167, 44, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-1 {
+    width: 280px;
+    height: 280px;
+    animation: rotate-orbit 20s linear infinite;
+}
+
+.orbit-2 {
+    width: 320px;
+    height: 320px;
+    animation: rotate-orbit 25s linear infinite reverse;
+}
+
+.orbit-3 {
+    width: 360px;
+    height: 360px;
+    animation: rotate-orbit 30s linear infinite;
+}
+
+@keyframes rotate-orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.orbit-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--gold), 0 0 20px var(--bright-gold);
+    animation: glow-particle 2s ease-in-out infinite;
+}
+
+.orbit-1 .orbit-particle {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit-2 .orbit-particle {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.orbit-3 .orbit-particle {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes glow-particle {
+    0%, 100% {
+        opacity: 0.6;
+        box-shadow: 0 0 10px var(--gold), 0 0 20px var(--bright-gold);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 15px var(--gold), 0 0 30px var(--bright-gold), 0 0 45px var(--metallic-gold);
+    }
+}
+
+/* Branding Content */
+.branding-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+}
+
+.logo-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+}
+
+.logo-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    animation: rotate-ring 20s linear infinite;
+}
+
+@keyframes rotate-ring {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.school-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    animation: float-logo 4s ease-in-out infinite;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 30px rgba(212, 167, 44, 0.5);
+}
+
+@keyframes float-logo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.school-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 167, 44, 0.3);
+    }
+    50% {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 30px rgba(212, 167, 44, 0.6);
+    }
+}
+
+.school-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(212, 167, 44, 0.5);
+    animation: taglinePulse 2s ease-in-out infinite;
+}
+
+@keyframes taglinePulse {
+    0%, 100% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+.school-motto {
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.9;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Login Section */
+.login-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+    background-size: 400% 400%;
+    animation: loginBgShift 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotateBg 20s linear infinite;
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loginBgShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.98);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);
+    animation: slide-in 0.6s ease-out, cardPulse 4s ease-in-out infinite;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.35), 0 0 0 2px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Login Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    animation: welcomeGlow 3s ease-in-out infinite;
+}
+
+@keyframes welcomeGlow {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2);
+    }
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
+/* Role Selection */
+.role-selection {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.role-btn {
+    flex: 1;
+    padding: 15px 10px;
+    border: 2px solid var(--gray-200);
+    background: var(--white);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.role-btn i {
+    font-size: 1.5rem;
+    color: var(--gray-400);
+    transition: all 0.3s ease;
+}
+
+.role-btn span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+    border-color: var(--gold);
+    background: rgba(212, 167, 44, 0.05);
+}
+
+.role-btn.active {
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-navy) 100%);
+    border-color: var(--gold);
+    box-shadow: 0 8px 20px rgba(6, 27, 58, 0.3), 0 0 15px rgba(212, 167, 44, 0.3);
+}
+
+.role-btn.active i {
+    color: var(--gold);
+}
+
+.role-btn.active span {
+    color: var(--white);
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}
+
+/* Alert */
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.alert-danger {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #DC2626;
+}
+
+.alert-danger i {
+    font-size: 1.2rem;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 50px 15px 45px;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background: var(--gray-100);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--royal-navy);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(11, 42, 91, 0.1);
+}
+
+.form-group input:focus + .input-icon {
+    color: var(--royal-navy);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-400);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.toggle-password:hover {
+    color: var(--royal-navy);
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.remember-me input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--royal-navy);
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--royal-navy);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-navy) 50%, var(--royal-blue) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(6, 27, 58, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 167, 44, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.login-btn:hover::before {
+    left: 100%;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(6, 27, 58, 0.4), 0 0 20px rgba(212, 167, 44, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.login-footer {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 5px;
+}
+
+.secure-text {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .school-name {
+        font-size: 2rem;
+    }
+    
+    .school-tagline {
+        font-size: 1rem;
+        letter-spacing: 6px;
+    }
+    
+    .login-card {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .branding-section {
+        padding: 50px 30px;
+        min-height: 45vh;
+    }
+    
+    .orbit-container {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .orbit-1 {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .orbit-2 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .orbit-3 {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .logo-container {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .logo-ring {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .school-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .school-name {
+        font-size: 1.8rem;
+    }
+    
+    .school-tagline {
+        font-size: 0.9rem;
+        letter-spacing: 6px;
+    }
+    
+    .school-motto {
+        font-size: 0.85rem;
+    }
+    
+    .login-section {
+        padding: 30px 20px;
+    }
+    
+    .login-card {
+        padding: 30px 25px;
+    }
+    
+    .role-selection {
+        gap: 10px;
+    }
+    
+    .role-btn {
+        padding: 12px 8px;
+    }
+    
+    .role-btn i {
+        font-size: 1.2rem;
+    }
+    
+    .role-btn span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .branding-section {
+        padding: 40px 20px;
+    }
+    
+    .school-name {
+        font-size: 1.5rem;
+    }
+    
+    .school-tagline {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+    
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    
+    .login-card {
+        padding: 25px 20px;
+    }
+    
+    .form-group input {
+        padding: 12px 45px 12px 40px;
+    }
+    
+    .login-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .logo-orbit {
+        width: 260px;
+        height: 260px;
+    }
+
+    .logo-orbit .school-logo {
+        width: 122px;
+        height: 122px;
+    }
+
+    .logo-orbit .orbit-one {
+        width: 205px;
+        height: 112px;
+    }
+
+    .logo-orbit .orbit-two {
+        width: 232px;
+        height: 130px;
+    }
+
+    .logo-orbit .orbit-three {
+        width: 172px;
+        height: 232px;
+    }
+
+    .feature-cards {
+        gap: 0.45rem;
+        margin-top: 1rem;
+    }
+
+    .feature-cards article {
+        padding: 0.7rem 0.35rem;
+    }
+
+    .feature-cards strong { font-size: 0.78rem; }
+    .feature-cards span { font-size: 0.63rem; }
+}
+
+/* Mobile-first reference composition. Desktop keeps the split-screen layout above. */
+@media (max-width: 700px) {
+    .auth-page {
+        min-height: 100dvh;
+        background:
+            linear-gradient(180deg, rgba(7, 34, 78, 0.62), rgba(7, 27, 58, 0.9)),
+            url('/images/campus.jpeg') center / cover fixed;
+    }
+
+    .auth-page .login-container {
+        min-height: 100dvh;
+        display: block;
+    }
+
+    .branding-section {
+        min-height: 0;
+        height: 300px;
+        padding: 1.25rem 1rem 0;
+        background:
+            linear-gradient(180deg, rgba(5, 33, 83, 0.18), rgba(5, 33, 83, 0.72)),
+            url('/images/campus.jpeg') center / cover;
+    }
+
+    .branding-content {
+        width: 100%;
+    }
+
+    .logo-orbit {
+        width: 190px;
+        height: 190px;
+        margin: 0 auto 0.15rem;
+    }
+
+    .logo-orbit .logo-glow {
+        width: 155px;
+        height: 155px;
+    }
+
+    .logo-orbit .school-logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 1rem;
+    }
+
+    .logo-orbit .orbit-one {
+        width: 155px;
+        height: 82px;
+    }
+
+    .logo-orbit .orbit-two {
+        width: 180px;
+        height: 98px;
+    }
+
+    .logo-orbit .orbit-three {
+        width: 128px;
+        height: 178px;
+    }
+
+    .logo-orbit .orbit span {
+        font-size: 0.85rem;
+    }
+
+    .school-name {
+        margin-bottom: 0.15rem;
+        font-size: clamp(1.1rem, 5vw, 1.45rem);
+        letter-spacing: 0.08em;
+        line-height: 1.15;
+    }
+
+    .school-tagline {
+        margin-bottom: 0.2rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+    }
+
+    .school-motto {
+        display: none;
+    }
+
+    .feature-cards {
+        display: none;
+    }
+
+    .login-section {
+        display: block;
+        min-height: 0;
+        padding: 0.85rem 0.85rem 1.25rem;
+        background: transparent;
+    }
+
+    .login-card {
+        max-width: none;
+        padding: 1.35rem 1rem 1.15rem;
+        border: 1px solid rgba(255, 255, 255, 0.86);
+        border-radius: 1.5rem;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 18px 40px rgba(0, 14, 42, 0.28);
+    }
+
+    .login-header {
+        margin-bottom: 1rem;
+    }
+
+    .eyebrow {
+        display: none;
+    }
+
+    .welcome-text {
+        margin-bottom: 0.35rem;
+        font-size: clamp(1.65rem, 8vw, 2rem);
+    }
+
+    .login-subtitle {
+        font-size: 0.82rem;
+    }
+
+    .role-selection {
+        gap: 0.35rem;
+        margin-bottom: 1rem;
+        padding: 0.25rem;
+        border: 1px solid #dfe7f5;
+        border-radius: 0.9rem;
+        background: #f5f8fd;
+    }
+
+    .role-btn {
+        min-height: 3.35rem;
+        padding: 0.45rem 0.25rem;
+        border: 0;
+        border-radius: 0.7rem;
+        background: transparent;
+    }
+
+    .role-btn.active {
+        background: linear-gradient(135deg, #168eff, #123eaa);
+        box-shadow: 0 7px 16px rgba(22, 101, 213, 0.28);
+    }
+
+    .role-btn span:last-child {
+        font-size: 0.72rem;
+    }
+
+    .role-icon {
+        font-size: 1.1rem !important;
+    }
+
+    .form-header {
+        display: none;
+    }
+
+    .form-group {
+        margin-bottom: 0.8rem;
+    }
+
+    .form-group label {
+        margin-bottom: 0.35rem;
+        font-size: 0.76rem;
+    }
+
+    .form-group input {
+        min-height: 3.35rem;
+        padding: 0.85rem 3.8rem 0.85rem 2.8rem;
+        border: 1px solid #dce5f2;
+        border-radius: 0.9rem;
+        background: #f8faff;
+        font-size: 0.9rem;
+    }
+
+    .input-icon {
+        left: 1rem;
+        color: #1765c1;
+    }
+
+    .toggle-password {
+        right: 0.65rem;
+        min-width: 3rem;
+        color: #1765c1;
+        font-size: 0.72rem;
+        font-weight: 700;
+    }
+
+    .form-options {
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin: 0.8rem 0 1rem;
+        font-size: 0.75rem;
+    }
+
+    .remember-me {
+        font-size: 0.75rem;
+    }
+
+    .forgot-password {
+        margin-left: auto;
+        font-size: 0.75rem;
+    }
+
+    .login-btn {
+        min-height: 3.45rem;
+        border-radius: 1rem;
+        background: linear-gradient(100deg, #08a7ff, #0875e8 55%, #112d89);
+        font-size: 1rem;
+    }
+
+    .login-quote {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .back-home {
+        margin-top: 0.75rem;
+        font-size: 0.72rem;
+    }
+
+    .mobile-benefits {
+        position: relative;
+        display: block;
+        height: 118px;
+        margin: 1rem -0.85rem -1.25rem;
+        overflow: hidden;
+        border-radius: 0 0 1.5rem 1.5rem;
+        background: #102a52;
+    }
+
+    .mobile-benefits img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.45;
+    }
+
+    .mobile-benefits::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(4, 24, 55, 0.8), rgba(5, 34, 74, 0.48));
+        content: '';
+    }
+
+    .mobile-benefit-list {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.7rem 0.45rem;
+    }
+
+    .mobile-benefit-list span {
+        color: #ffd166;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .mobile-benefit-list b {
+        display: block;
+        margin-top: 0.3rem;
+        color: #ffffff;
+        font-size: 0.55rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 700px) and (max-height: 700px) {
+    .branding-section { height: 245px; }
+    .logo-orbit { width: 150px; height: 150px; }
+    .logo-orbit .school-logo { width: 78px; height: 78px; }
+    .logo-orbit .orbit-one { width: 124px; height: 66px; }
+    .logo-orbit .orbit-two { width: 142px; height: 78px; }
+    .logo-orbit .orbit-three { width: 104px; height: 140px; }
+    .mobile-benefits { height: 96px; }
+}
